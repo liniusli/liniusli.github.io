@@ -146,26 +146,56 @@
                 </div>
             </div>
         </div>
-<!doctype html>
+        <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>测试</title>
- 
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('div1').addEventListener('click', function() {
-                document.getElementById('img1').src = document.getElementById('img1').src
-            });
-        }
-    </script>
+	<title>图片放大</title>
 </head>
+<style type="text/css">
+	.main_div{
+		margin: 20px auto;
+		text-align: center;
+
+	}
+	.pic_div{
+		position: relative;
+		background-color: pink;
+		border: 1px dotted red;
+		margin: 10px auto;
+		width: 800px;
+		height: 600px;
+	}
+	img{
+		width: 600px;
+		height: 400px;
+	}
+
+</style>
+<script type="text/javascript">
+	function bigit(){
+		var image=document.getElementsByClassName("pic")[0];
+		image.style.height=image.height*1.1+'px';
+		image.style.width=image.width*1.1+'px';
+	}
+	function littleit(){
+		var image=document.getElementsByClassName("pic")[0];
+		image.style.height=image.height/1.1+'px';
+		image.style.width=image.width/1.1+'px';
+	}
+</script>
 <body>
-    <div id="div1" style="width: 100px; height: 100px;background-color:#eeffee;">
-        点击测试</div>
-    <img id="img1" src="https://img-blog.csdnimg.cn/20190616203502503.gif"></img>
+	<div  style="" class="main_div">
+		<p>图片在一个区域里放大缩小</p>
+		<button onclick="bigit()">图片放大</button>&nbsp;&nbsp;<button onclick="littleit()">图片缩小</button>
+		<div class="pic_div">
+			<img src="bgcc.jpg" class="pic">
+		</div>
+	</div>
+
 </body>
 </html>
+
+
 
 
     </div>
